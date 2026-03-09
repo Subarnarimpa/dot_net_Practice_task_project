@@ -1,0 +1,37 @@
+@UserCrudApi_HostAddress = http://localhost:5000
+
+GET {{UserCrudApi_HostAddress}}/api/users
+Accept: application/json
+
+###
+
+POST {{UserCrudApi_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com"
+}
+
+###
+
+GET {{UserCrudApi_HostAddress}}/api/users/1
+Accept: application/json
+
+###
+
+PUT {{UserCrudApi_HostAddress}}/api/users/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "John Doe Updated",
+  "email": "john.updated@example.com"
+}
+
+###
+
+DELETE {{UserCrudApi_HostAddress}}/api/users/1
+Accept: application/json
+
+###
