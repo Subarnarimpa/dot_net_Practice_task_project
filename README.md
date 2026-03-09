@@ -3,6 +3,7 @@ A simple .NET Core Web API project with CRUD operations for a User table using E
 
 ## Features
 - Create, Read, Update, Delete users
+- Create, Read, Update, Delete todos/tasks (linked to users)
 - SQLite database
 - RESTful API endpoints
 - Swagger/OpenAPI documentation
@@ -10,9 +11,15 @@ A simple .NET Core Web API project with CRUD operations for a User table using E
 ## API Endpoints
 - `GET /api/users` - Get all users
 - `GET /api/users/{id}` - Get user by ID
-- `POST /api/users` - Create a new user
-- `PUT /api/users/{id}` - Update a user
+- `POST /api/users` - Create a new user (include Name, Email, PasswordHash, Role)
+- `PUT /api/users/{id}` - Update a user (Name, Email, PasswordHash, Role)
 - `DELETE /api/users/{id}` - Delete a user
+
+- `GET /api/todos` - Get all todos
+- `GET /api/todos/{id}` - Get todo by ID
+- `POST /api/todos` - Create a new todo (include Title, Description, Status, UserId)
+- `PUT /api/todos/{id}` - Update a todo
+- `DELETE /api/todos/{id}` - Delete a todo
 
 ## Running the Application
 1. Navigate to the project directory: `cd UserCrudApi`
@@ -29,3 +36,4 @@ Use the `UserCrudApi.http` file in VS Code with the REST Client extension to tes
 
 ## Database
 The application uses SQLite with Entity Framework Core. The database file `UserCrudApi.db` is created in the project directory.
+## url https://supreme-space-waffle-5px695w95qr246w9-5200.app.github.dev/swagger/index.html
